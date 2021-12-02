@@ -19,4 +19,9 @@ public class Side<T> {
 		return this.information;
 	}
 	
+	
+	public String toString() {
+		return (String) this.information;
+	}
+	
 }
