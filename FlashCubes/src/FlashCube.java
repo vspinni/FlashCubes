@@ -46,6 +46,8 @@ public class FlashCube {
 
 
 
+	
+	//Getters and setters
 
 	public Side<String> getFrontSide() {
 		return frontSide;
@@ -143,9 +145,10 @@ public class FlashCube {
 	}
 
 
+	
 
 
-	//A method, switches the currentSide to be in the direction specified.
+	//A method, switches the currentSide to be in the direction specified. Based on the logic of rotating a cube
 	public void flip(int direction) {
 		if (direction < LEFT || direction > BACK) {
 			throw new IllegalArgumentException("Invalid direction specified!");
@@ -164,7 +167,7 @@ public class FlashCube {
 			} else if (direction == BACK) {
 				this.currentSide = backSide;
 			} else {
-				System.out.println("PROBLEM: INVALID DIRECTION"); // should never happen because of arg checking
+				throw new IllegalArgumentException("Invalid direction!"); // should never happen because of arg checking
 			}
 		} else if (currentSide == backSide) {
 			if (direction == LEFT) {
@@ -178,7 +181,7 @@ public class FlashCube {
 			} else if (direction == BACK) {
 				this.currentSide = frontSide;
 			} else {
-				System.out.println("PROBLEM: INVALID DIRECTION"); // should never happen because of arg checking
+				throw new IllegalArgumentException("Invalid direction!"); // should never happen because of arg checking
 			}
 		} else if (currentSide == rightSide) {
 			if (direction == LEFT) {
@@ -192,7 +195,7 @@ public class FlashCube {
 			} else if (direction == BACK) {
 				this.currentSide = leftSide;
 			} else {
-				System.out.println("PROBLEM: INVALID DIRECTION"); // should never happen because of arg checking
+				throw new IllegalArgumentException("Invalid direction!"); // should never happen because of arg checking
 			}
 		} else if (currentSide == leftSide) {
 			if (direction == LEFT) {
@@ -206,7 +209,7 @@ public class FlashCube {
 			} else if (direction == BACK) {
 				this.currentSide = rightSide;
 			} else {
-				System.out.println("PROBLEM: INVALID DIRECTION"); // should never happen because of arg checking
+				throw new IllegalArgumentException("Invalid direction!"); // should never happen because of arg checking
 			}
 		} else if (currentSide == upSide) {
 			if (direction == LEFT) {
@@ -220,7 +223,7 @@ public class FlashCube {
 			} else if (direction == BACK) {
 				this.currentSide = downSide;
 			} else {
-				System.out.println("PROBLEM: INVALID DIRECTION"); // should never happen because of arg checking
+				throw new IllegalArgumentException("Invalid direction!"); // should never happen because of arg checking
 			}
 		} else if (currentSide == downSide) {
 			if (direction == LEFT) {
@@ -234,10 +237,11 @@ public class FlashCube {
 			} else if (direction == BACK) {
 				this.currentSide = upSide;
 			} else {
-				System.out.println("PROBLEM: INVALID DIRECTION"); // should never happen because of arg checking
+				throw new IllegalArgumentException("Invalid direction!"); // should never happen because of arg checking
 			}
 		} else {
 			System.out.println("SOMETHING IS WRONG"); //Should never happen
+			throw new IllegalArgumentException("Invalid direction!");
 		}
 	}
 

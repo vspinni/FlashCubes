@@ -35,7 +35,7 @@ public class Prototype extends JFrame {
 	private final String WINDOW_LABEL = "FlashCubes";
 	
 	
-	//The 2D FlashCube to be shown
+	//The FlashCube to be shown
 	private static FlashCube exampleFlashCube;
 	
 
@@ -101,6 +101,8 @@ public class Prototype extends JFrame {
 		lblDisplay.setForeground(Color.black);
 		lblDisplay.setBorder(brdrDisplay);
 		
+		
+		//Buttons for changing direction
 		JButton btnLeft = new JButton("Flip Left");
 		
 		JButton btnRight = new JButton("Flip Right");
@@ -109,10 +111,14 @@ public class Prototype extends JFrame {
 		
 		JButton btnUp = new JButton("Flip Up");
 		
-		JButton btnNext = new JButton("Next Cube!");
-		
 		JButton btnBack = new JButton("Flip Around");
 		
+		
+		//button to move on to the next FlashCube in the Deck
+		//Doesn't do anything within this prototype
+		JButton btnNext = new JButton("Next Cube!");
+		
+		//Determine what to do if a a Button is clicked
 		btnLeft.addActionListener(new ActionListener() {
 
 		    @Override
@@ -167,7 +173,7 @@ public class Prototype extends JFrame {
 		
 		
 		
-		
+		//JSwing components
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)

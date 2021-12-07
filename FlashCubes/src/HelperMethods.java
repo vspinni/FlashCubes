@@ -3,7 +3,7 @@
 public class HelperMethods {
 
 	
-	//Bookends a string between html headers, useful for Labels
+	//Bookends a string between html headers, useful for JLabels to not spill off the page
 	public static String htmlWrap(String s) {
 		return "<html>" + s + "</html>";
 	}
