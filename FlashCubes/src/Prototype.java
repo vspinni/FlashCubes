@@ -34,8 +34,6 @@ public class Prototype extends JFrame {
 	//Label for the window
 	private final String WINDOW_LABEL = "FlashCubes";
 	
-	private final String exampleQuestion = "What is the name of this course?";
-	private final String exampleDefinition = "CS 411 Software Engineering";
 	
 	//The 2D FlashCube to be shown
 	private static FlashCube exampleFlashCube;
@@ -100,7 +98,7 @@ public class Prototype extends JFrame {
 		lblDisplay.setPreferredSize(new Dimension(300, 300));
 		lblDisplay.setMaximumSize(new Dimension(300, 300));
 		lblDisplay.setFont(new Font("TimesRoman", 0, 24));
-		lblDisplay.setForeground(Color.magenta);
+		lblDisplay.setForeground(Color.black);
 		lblDisplay.setBorder(brdrDisplay);
 		
 		JButton btnLeft = new JButton("Flip Left");
